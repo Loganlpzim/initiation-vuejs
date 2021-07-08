@@ -22,7 +22,8 @@
       <input type="text" v-model="newTask">
       <button @click="addTask">Ajouter une tâche</button>
     </div>
-
+    <Player />
+    <Player />
     <ol>
       <li :key="task.id" v-for="task in tasks">
         {{task.content}}
@@ -33,10 +34,12 @@
 
 <script>
 import { v4 as uuidv4 } from 'uuid';
+import Player from './components/Player.vue';
 
 export default {
   name: 'App',
   components: {
+    Player
   },
   methods: {
     clickMe: function() {
